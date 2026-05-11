@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - File Dock{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="badge bg-primary bg-opacity-25 text-primary border border-primary mb-3 p-2 px-3 rounded-pill">Get in Touch</div>
+            <h1 class="display-4 fw-bold">Contact <span class="gradient-text">Our Team</span></h1>
+            <p class="lead text-muted max-w-2xl mx-auto">Have a question, need support, or want to explore partnership opportunities? We'd love to hear from you.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="glass-card p-5">
+                    <form>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label text-muted">Your Name</label>
+                                <input type="text" class="form-control custom-input bg-transparent" id="name" placeholder="John Doe">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label text-muted">Your Email</label>
+                                <input type="email" class="form-control custom-input bg-transparent" id="email" placeholder="john@example.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label text-muted">Subject</label>
+                                <input type="text" class="form-control custom-input bg-transparent" id="subject" placeholder="How can we help?">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label text-muted">Message</label>
+                                <textarea class="form-control custom-input bg-transparent" id="message" rows="5" placeholder="Your message here..."></textarea>
+                            </div>
+                            <div class="col-12 text-center mt-5">
+                                <button type="button" class="btn btn-primary btn-lg btn-rounded btn-glow px-5 py-3">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4 text-center">
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-envelope text-primary fs-2 mb-3"></i>
+                <h5 class="fw-bold">Email Us</h5>
+                <p class="text-muted">support@filedock.com</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-telegram text-info fs-2 mb-3"></i>
+                <h5 class="fw-bold">Telegram Support</h5>
+                <p class="text-muted">@FileDockSupport</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="bi bi-geo-alt text-secondary fs-2 mb-3"></i>
+                <h5 class="fw-bold">Office</h5>
+                <p class="text-muted">123 Cloud Avenue, Tech City</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

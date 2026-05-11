@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - File Dock{% endblock %}
+
+{% block content %}
+<section class="py-5 d-flex align-items-center justify-content-center" style="min-height: 60vh;">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="glass-card p-5 position-relative overflow-hidden">
+                    <div class="hero-blob" style="top: -100px; left: -100px; width: 300px; height: 300px; animation-duration: 6s;"></div>
+                    <i class="bi bi-tools display-1 text-primary mb-4 position-relative z-1"></i>
+                    <h2 class="fw-bold position-relative z-1 mb-3">Login <span class="text-warning">Coming Soon</span></h2>
+                    <p class="text-muted position-relative z-1 mb-4">
+                        We are currently upgrading our authentication system to provide you with an even more secure and seamless experience. Web dashboard access will be available shortly.
+                    </p>
+                    <div class="position-relative z-1 p-3 bg-dark bg-opacity-50 rounded border border-secondary">
+                        <p class="mb-2">In the meantime, you can upload and manage your files using our Telegram bot:</p>
+                        <a href="https://t.me/FileDock_FileUploaderBot" target="_blank" class="btn btn-info btn-rounded btn-glow mt-2">
+                            <i class="bi bi-telegram me-2"></i>Open FileDock Bot
+                        </a>
+                    </div>
+                    <div class="mt-4 position-relative z-1">
+                        <a href="{{ url_for('index') }}" class="text-decoration-none text-muted hover-primary">
+                            <i class="bi bi-arrow-left me-2"></i>Return Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

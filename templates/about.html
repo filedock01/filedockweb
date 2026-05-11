@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - File Dock{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="badge bg-primary bg-opacity-25 text-primary border border-primary mb-3 p-2 px-3 rounded-pill">Our Story</div>
+                <h1 class="display-4 fw-bold mb-4">Redefining <span class="gradient-text">Cloud Storage</span></h1>
+                <p class="lead text-muted mb-4">
+                    Founded in 2026, File Dock was built with a simple mission: to provide secure, lightning-fast, and universally accessible cloud storage for everyone. We believe your data should be safe, private, and always just a click away.
+                </p>
+                <p class="text-muted">
+                    We noticed a gap in the market for a truly cross-platform storage solution that seamlessly integrates with modern messaging apps like Telegram, while still providing robust web and mobile interfaces. That's why we created File Dock.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-5 text-center position-relative overflow-hidden">
+                    <div class="hero-blob" style="top: -50px; left: -50px; width: 200px; height: 200px; animation-duration: 5s;"></div>
+                    <i class="bi bi-cloud-check-fill display-1 text-primary mb-4 position-relative z-1"></i>
+                    <h3 class="fw-bold position-relative z-1">Over 1 Million Files Stored</h3>
+                    <p class="text-muted position-relative z-1">Trusted by users worldwide.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-5">
+            <div class="col-12 text-center mb-5">
+                <h2 class="fw-bold">Our Core Values</h2>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="glass-card h-100">
+                    <i class="bi bi-shield-check text-success fs-2 mb-3"></i>
+                    <h4 class="fw-bold">Privacy First</h4>
+                    <p class="text-muted">We don't sell your data. Your files are encrypted and remain yours, always.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="glass-card h-100">
+                    <i class="bi bi-lightning text-warning fs-2 mb-3"></i>
+                    <h4 class="fw-bold">Performance</h4>
+                    <p class="text-muted">We invest heavily in infrastructure to ensure blazing fast speeds worldwide.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="glass-card h-100">
+                    <i class="bi bi-people text-info fs-2 mb-3"></i>
+                    <h4 class="fw-bold">User Centric</h4>
+                    <p class="text-muted">Every feature we build starts with understanding what our users truly need.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

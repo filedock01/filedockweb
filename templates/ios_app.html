@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}iOS App - File Dock{% endblock %}
+
+{% block content %}
+<section class="py-5 d-flex align-items-center justify-content-center" style="min-height: 60vh;">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="glass-card p-5 position-relative overflow-hidden">
+                    <div class="hero-blob-2" style="bottom: -100px; right: -100px; width: 300px; height: 300px; animation-duration: 8s;"></div>
+                    <i class="bi bi-apple display-1 text-secondary mb-4 position-relative z-1"></i>
+                    <h2 class="fw-bold position-relative z-1 mb-3">iOS App <span class="badge bg-warning text-dark fs-6 align-middle ms-2">In Progress</span></h2>
+                    <p class="text-muted position-relative z-1 mb-4">
+                        We are working hard to bring the ultimate File Dock experience to your iPhone and iPad. Our iOS application is currently in development and will be released soon on the App Store.
+                    </p>
+                    <div class="position-relative z-1">
+                        <p class="text-muted small mb-3">Want to be notified when it launches?</p>
+                        <form class="d-flex gap-2 justify-content-center max-w-sm mx-auto">
+                            <input type="email" class="form-control custom-input" placeholder="Enter your email" style="max-width: 250px;">
+                            <button type="button" class="btn btn-primary btn-rounded btn-glow px-4">Notify Me</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

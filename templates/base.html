@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}File Dock - Secure Cloud Storage{% endblock %}</title>
+    <meta name="description" content="File Dock is a secure, fast, and reliable cloud storage and file-sharing platform. Access your files anywhere.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 brand-logo" href="{{ url_for('index') }}">
+                <i class="bi bi-cloud-arrow-up-fill text-primary-glow"></i>
+                <span class="fw-bold gradient-text">File Dock</span>
+            </a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'contact' %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Apps
+                        </a>
+                        <ul class="dropdown-menu custom-dropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('android_app') }}"><i class="bi bi-android2 me-2"></i>Android App</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('ios_app') }}"><i class="bi bi-apple me-2"></i>iOS App</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://t.me/FileDock_FileUploaderBot" target="_blank"><i class="bi bi-telegram me-2"></i>Telegram Bot</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-rounded">Login</a>
+                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-rounded btn-glow">Sign Up Free</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-footer mt-auto py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-3 brand-logo" href="{{ url_for('index') }}">
+                        <i class="bi bi-cloud-arrow-up-fill text-primary-glow"></i>
+                        <span class="fw-bold gradient-text">File Dock</span>
+                    </a>
+                    <p class="text-muted">Your secure, fast, and reliable cloud storage partner. Access your files anywhere, anytime with ease.</p>
+                    <div class="d-flex gap-3 social-links mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="https://t.me/FileDock_FileUploaderBot" target="_blank" class="social-icon"><i class="bi bi-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Product</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="{{ url_for('index') }}">Features</a></li>
+                        <li><a href="{{ url_for('android_app') }}">Android App</a></li>
+                        <li><a href="{{ url_for('ios_app') }}">iOS App <span class="badge bg-warning text-dark ms-1">Soon</span></a></li>
+                        <li><a href="https://t.me/FileDock_FileUploaderBot" target="_blank">Telegram Bot</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Company</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                        <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                        <li><a href="{{ url_for('terms') }}">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Stay Updated</h5>
+                    <p class="text-muted">Subscribe to our newsletter for the latest updates and features.</p>
+                    <form class="newsletter-form d-flex gap-2">
+                        <input type="email" class="form-control custom-input" placeholder="Enter your email" required>
+                        <button class="btn btn-primary btn-glow" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="mb-0 text-muted">&copy; 2026 File Dock. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
