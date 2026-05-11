@@ -2,139 +2,249 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero-section text-center position-relative">
+<section class="hero-section position-relative">
     <div class="hero-blob"></div>
-    <div class="hero-blob-2"></div>
     <div class="container position-relative z-1">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
                 <span class="badge bg-primary bg-opacity-25 text-primary border border-primary mb-3 p-2 px-3 rounded-pill">
-                    <i class="bi bi-rocket-takeoff me-2"></i>The Future of Cloud Storage
+                    <i class="bi bi-rocket-takeoff me-2"></i>File Dock Platform
                 </span>
                 <h1 class="display-3 fw-bold mb-4">
-                    Store, Share, and Access Files <br>
-                    <span class="gradient-text">Lightning Fast</span>
+                    File Management, <br>
+                    <span class="gradient-text">Perfected for Mobile & Web.</span>
                 </h1>
                 <p class="lead text-muted mb-5">
-                    File Dock is the ultimate cloud storage solution. Securely upload your files, manage them effortlessly, and share them across all your devices and with Telegram.
+                    A multi-platform file storage solution crafted for speed and security. Manage files seamlessly via Web, User App, Admin App, and Telegram.
                 </p>
-                <div class="d-flex justify-content-center gap-3 flex-wrap">
-                    <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg btn-rounded btn-glow px-5 py-3">
-                        <i class="bi bi-cloud-upload me-2"></i>Start Uploading
-                    </a>
-                    <a href="https://t.me/FileDock_FileUploaderBot" target="_blank" class="btn btn-outline-light btn-lg btn-rounded px-5 py-3 glass-btn">
-                        <i class="bi bi-telegram me-2 text-info"></i>Try Telegram Bot
-                    </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="mockup-wrapper">
+                    <img src="{{ url_for('static', filename='img/hero.png') }}" alt="File Dock Apps Interface" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Stats Section -->
+<section class="py-5 border-top border-bottom border-secondary" style="background: rgba(2, 6, 23, 0.5);">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-number">90K+</div>
+                <div class="text-muted text-uppercase small fw-bold tracking-wide">Active Users</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-number">1M+</div>
+                <div class="text-muted text-uppercase small fw-bold tracking-wide">Files Uploaded</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-number">99.9%</div>
+                <div class="text-muted text-uppercase small fw-bold tracking-wide">Uptime</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-number">24/7</div>
+                <div class="text-muted text-uppercase small fw-bold tracking-wide">Premium Support</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Two Apps Flow (User & Admin) Section -->
 <section class="py-5 my-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3">Why Choose <span class="gradient-text">File Dock</span>?</h2>
-            <p class="text-muted max-w-2xl mx-auto">Experience cloud storage re-imagined with unparalleled speed, security, and accessibility.</p>
+            <span class="text-info fw-bold text-uppercase tracking-wide small">Platform Ecosystem</span>
+            <h2 class="fw-bold mb-3 display-5">Two Apps. <span class="gradient-text">One Seamless Flow.</span></h2>
+            <p class="text-muted max-w-2xl mx-auto">Native Android experiences tailored for both users and administrators, keeping you connected wherever you go.</p>
         </div>
-        <div class="row g-4 mt-4">
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <div class="icon-wrapper mb-4 text-primary fs-1">
-                        <i class="bi bi-shield-lock-fill"></i>
-                    </div>
-                    <h4 class="fw-bold">Bank-Grade Security</h4>
-                    <p class="text-muted mb-0">Your files are encrypted end-to-end, ensuring your data remains private and secure at all times.</p>
+        <div class="row align-items-center g-5 mt-4">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="mockup-wrapper">
+                    <img src="{{ url_for('static', filename='img/hero.png') }}" alt="Android User and Admin Apps" class="img-fluid rounded">
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <div class="icon-wrapper mb-4 text-secondary fs-1">
-                        <i class="bi bi-lightning-charge-fill"></i>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <div class="mb-5">
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="feature-list-icon"><i class="bi bi-person-badge"></i></div>
+                        <div>
+                            <h4 class="fw-bold">Dedicated User App</h4>
+                            <p class="text-muted mb-0">A streamlined Android experience for your users to access, organize, and view their files instantly with auto-quality selection.</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold">Lightning Fast</h4>
-                    <p class="text-muted mb-0">Experience blazing-fast upload and download speeds thanks to our globally distributed CDN infrastructure.</p>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="feature-list-icon"><i class="bi bi-shield-lock"></i></div>
+                        <div>
+                            <h4 class="fw-bold">Secure Admin App</h4>
+                            <p class="text-muted mb-0">A powerful Android application for administrators to manage users, monitor uploads, and moderate content on the go.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <div class="feature-list-icon"><i class="bi bi-cloud-arrow-down"></i></div>
+                        <div>
+                            <h4 class="fw-bold">Offline Sync Mode</h4>
+                            <p class="text-muted mb-0">Allow users to securely pin files for offline access within the app, protected by robust anti-piracy measures.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card h-100 text-center">
-                    <div class="icon-wrapper mb-4 text-info fs-1">
-                        <i class="bi bi-phone-fill"></i>
-                    </div>
-                    <h4 class="fw-bold">Cross-Platform</h4>
-                    <p class="text-muted mb-0">Access your files anywhere. We offer web access, Android apps, and direct Telegram integration.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('android_app') }}" class="btn btn-outline-primary btn-rounded"><i class="bi bi-android2 me-2"></i>User App</a>
+                    <a href="{{ url_for('android_app') }}" class="btn btn-outline-secondary btn-rounded"><i class="bi bi-shield-check me-2"></i>Admin App</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Telegram Bot Showcase Section -->
-<section class="py-5 position-relative overflow-hidden">
-    <div class="container">
-        <div class="glass-card p-0 overflow-hidden">
-            <div class="row g-0 align-items-center">
-                <div class="col-lg-6 p-5">
-                    <div class="badge bg-info text-dark mb-3">Seamless Integration</div>
-                    <h2 class="fw-bold mb-4">Meet Our <span class="text-info">Telegram Bot</span></h2>
-                    <p class="text-muted lead mb-4">
-                        Upload and manage files directly from your favorite messaging app. With <strong>FileDock_FileUploaderBot</strong>, you can forward files, generate sharing links instantly, and access your vault without leaving Telegram.
-                    </p>
-                    <ul class="list-unstyled text-muted mb-5">
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Instantly upload media & documents</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Generate one-click sharing links</li>
-                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 100% Free to use</li>
-                    </ul>
-                    <a href="https://t.me/FileDock_FileUploaderBot" target="_blank" class="btn btn-info btn-rounded px-4 py-2 fw-bold text-dark btn-glow">
-                        Open in Telegram <i class="bi bi-arrow-right ms-2"></i>
-                    </a>
+<!-- Total Control Center -->
+<section class="py-5 my-5 position-relative">
+    <div class="hero-blob-2" style="top: 0; right: 0; bottom: auto;"></div>
+    <div class="container position-relative z-1">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="text-secondary fw-bold text-uppercase tracking-wide small">Web Admin</span>
+                <h2 class="fw-bold mb-4 display-5">Total Control <span class="text-secondary">Center</span></h2>
+                <p class="text-muted mb-5 lead">A beautiful, data-rich web dashboard that gives you a bird's-eye view of your entire storage infrastructure.</p>
+                
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-list-icon bg-secondary bg-opacity-10 text-secondary"><i class="bi bi-graph-up-arrow"></i></div>
+                    <div>
+                        <h5 class="fw-bold">Track Performance</h5>
+                        <p class="text-muted small mb-0">Monitor bandwidth usage, storage limits, and active user sessions in real-time.</p>
+                    </div>
                 </div>
-                <div class="col-lg-6 bg-darker p-5 text-center d-flex align-items-center justify-content-center border-start border-secondary">
-                    <i class="bi bi-robot display-1 text-info animate-bounce"></i>
+                <div class="d-flex align-items-start mb-4">
+                    <div class="feature-list-icon bg-secondary bg-opacity-10 text-secondary"><i class="bi bi-key"></i></div>
+                    <div>
+                        <h5 class="fw-bold">Manage Permissions</h5>
+                        <p class="text-muted small mb-0">Granular role-based access control for users, moderators, and fellow administrators.</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-start">
+                    <div class="feature-list-icon bg-secondary bg-opacity-10 text-secondary"><i class="bi bi-sliders"></i></div>
+                    <div>
+                        <h5 class="fw-bold">Live Management</h5>
+                        <p class="text-muted small mb-0">Instantly suspend accounts, revoke file access, or adjust quota limits without server restarts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mockup-wrapper border-secondary">
+                    <img src="{{ url_for('static', filename='img/admin.png') }}" alt="Admin Dashboard" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- For Creators & Viewers Section -->
-<section class="py-5">
-    <div class="container">
+
+<!-- Built for Mobile Features -->
+<section class="py-5 my-5 bg-darker border-top border-bottom border-secondary">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-bold text-uppercase tracking-wide small">Core Technology</span>
+            <h2 class="fw-bold mb-3 display-5">Built for the <span class="gradient-text">Mobile Era.</span></h2>
+            <p class="text-muted max-w-2xl mx-auto">We designed our backend architecture from the ground up to support lightning-fast mobile connectivity.</p>
+        </div>
+        
         <div class="row g-4">
-            <!-- For Creators -->
-            <div class="col-lg-6">
-                <div class="glass-card h-100 position-relative overflow-hidden border-primary">
-                    <div class="hero-blob" style="top: -150px; left: -150px; width: 300px; height: 300px; opacity: 0.5;"></div>
-                    <div class="position-relative z-1 p-3">
-                        <div class="badge bg-primary bg-opacity-25 text-primary mb-3 px-3 py-2 rounded-pill">
-                            <i class="bi bi-camera-video-fill me-2"></i>For Creators
-                        </div>
-                        <h2 class="fw-bold mb-4">Empower Your Content</h2>
-                        <ul class="list-unstyled text-muted mb-4">
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-rocket-fill text-primary me-3 fs-5"></i> Unlimited High-Speed Uploads</li>
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-graph-up-arrow text-primary me-3 fs-5"></i> Detailed Download Analytics</li>
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-cash-coin text-primary me-3 fs-5"></i> Monetization Ready</li>
-                        </ul>
-                        <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-rounded px-4">Start Creating <i class="bi bi-arrow-right ms-2"></i></a>
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card h-100 p-4 border-0 bg-transparent text-center">
+                    <div class="icon-wrapper mb-4 text-info mx-auto" style="width: 64px; height: 64px; border-radius: 16px; background: rgba(13, 202, 240, 0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h5 class="fw-bold">Mobile-First Ecosystem</h5>
+                    <p class="text-muted small mb-0">Optimized APIs ensuring minimal data footprint and rapid response times on cellular networks.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card h-100 p-4 border-0 bg-transparent text-center">
+                    <div class="icon-wrapper mb-4 text-primary mx-auto" style="width: 64px; height: 64px; border-radius: 16px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h5 class="fw-bold">Instant Access Control</h5>
+                    <p class="text-muted small mb-0">Dynamic token generation ensuring file links expire exactly when you command them to.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card h-100 p-4 border-0 bg-transparent text-center">
+                    <div class="icon-wrapper mb-4 text-warning mx-auto" style="width: 64px; height: 64px; border-radius: 16px; background: rgba(255, 193, 7, 0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h5 class="fw-bold">Zero-Latency Streaming</h5>
+                    <p class="text-muted small mb-0">Global CDN integration pushing your media and files as close to the end user as possible.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="glass-card h-100 p-4 border-0 bg-transparent text-center">
+                    <div class="icon-wrapper mb-4 text-success mx-auto" style="width: 64px; height: 64px; border-radius: 16px; background: rgba(25, 135, 84, 0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                        <i class="bi bi-safe"></i>
+                    </div>
+                    <h5 class="fw-bold">Bank-Grade Encryption</h5>
+                    <p class="text-muted small mb-0">AES-256 encryption at rest and TLS 1.3 in transit. Your corporate data remains impenetrable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 my-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-success fw-bold text-uppercase tracking-wide small">Simple Workflow</span>
+            <h2 class="fw-bold mb-3 display-5">How It <span class="text-success">Works</span></h2>
+            <p class="text-muted max-w-2xl mx-auto">Three simple steps to manage and distribute your digital assets globally.</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="glass-card p-5">
+                    <div class="stepper-item">
+                        <div class="stepper-icon">1</div>
+                        <h4 class="fw-bold mb-2">Upload via Admin App or Web</h4>
+                        <p class="text-muted">Select files from your device, drag-and-drop into the web portal, or simply forward them to our Telegram bot. Your files are instantly encrypted and vaulted.</p>
+                    </div>
+                    <div class="stepper-item">
+                        <div class="stepper-icon">2</div>
+                        <h4 class="fw-bold mb-2">Generate Smart Links</h4>
+                        <p class="text-muted">Create highly customizable sharing links. Set expiration dates, password protection, and download limits directly from your dashboard.</p>
+                    </div>
+                    <div class="stepper-item">
+                        <div class="stepper-icon">3</div>
+                        <h4 class="fw-bold mb-2">Instant Access for Users</h4>
+                        <p class="text-muted mb-0">Share the link. Your recipients can view or download the files instantly via browser or directly within the dedicated User App for an immersive experience.</p>
                     </div>
                 </div>
             </div>
-            <!-- For Viewers -->
+        </div>
+    </div>
+</section>
+
+<!-- Platform Tools & Monetization -->
+<section class="py-5 my-5 position-relative overflow-hidden">
+    <div class="hero-blob" style="bottom: -200px; left: -200px; top: auto;"></div>
+    <div class="container position-relative z-1">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="glass-card h-100 position-relative overflow-hidden border-secondary">
-                    <div class="hero-blob-2" style="bottom: -150px; right: -150px; width: 300px; height: 300px; opacity: 0.5;"></div>
-                    <div class="position-relative z-1 p-3">
-                        <div class="badge bg-secondary bg-opacity-25 text-secondary mb-3 px-3 py-2 rounded-pill">
-                            <i class="bi bi-play-circle-fill me-2"></i>For Viewers
-                        </div>
-                        <h2 class="fw-bold mb-4">Seamless Experience</h2>
-                        <ul class="list-unstyled text-muted mb-4">
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-lightning-fill text-secondary me-3 fs-5"></i> Lightning Fast Downloads</li>
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-display text-secondary me-3 fs-5"></i> In-browser Streaming</li>
-                            <li class="mb-3 d-flex align-items-center"><i class="bi bi-shield-check text-secondary me-3 fs-5"></i> Safe & Secure Access</li>
-                        </ul>
-                        <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-rounded px-4">Explore Content <i class="bi bi-arrow-right ms-2"></i></a>
-                    </div>
+                <span class="badge bg-warning bg-opacity-25 text-warning border border-warning mb-3 p-2 px-3 rounded-pill">
+                    <i class="bi bi-cash-coin me-2"></i>Creator Tools
+                </span>
+                <h2 class="fw-bold mb-4 display-5">Upload, Share & <span class="text-warning">Monetize</span> Your Content!</h2>
+                <p class="text-muted mb-4 lead">File Dock isn't just storage; it's a distribution platform. One platform, three powerful tools to maximize your reach.</p>
+                
+                <ul class="list-unstyled mb-5">
+                    <li class="mb-3 d-flex align-items-center text-muted"><i class="bi bi-check-circle-fill text-warning me-3 fs-5"></i> <strong>Web Platform:</strong> Universal access from any browser.</li>
+                    <li class="mb-3 d-flex align-items-center text-muted"><i class="bi bi-check-circle-fill text-warning me-3 fs-5"></i> <strong>Android User App:</strong> Dedicated viewing experience.</li>
+                    <li class="mb-3 d-flex align-items-center text-muted"><i class="bi bi-check-circle-fill text-warning me-3 fs-5"></i> <strong>Telegram Bot:</strong> Instant uploads from chat.</li>
+                </ul>
+                
+                <a href="{{ url_for('login') }}" class="btn btn-warning text-dark fw-bold btn-rounded px-4 py-2">View Monetization Plans</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="mockup-wrapper border-warning" style="box-shadow: 0 0 40px rgba(255, 193, 7, 0.2);">
+                    <img src="{{ url_for('static', filename='img/money.png') }}" alt="Monetize Content" class="img-fluid rounded">
                 </div>
             </div>
         </div>
@@ -145,8 +255,8 @@
 <section class="py-5 my-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold mb-3">Frequently Asked <span class="gradient-text">Questions</span></h2>
-            <p class="text-muted max-w-2xl mx-auto">Got questions? We've got answers. If you don't find what you're looking for, feel free to contact us.</p>
+            <h2 class="fw-bold mb-3 display-6">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <p class="text-muted max-w-2xl mx-auto">Got questions? We've got answers.</p>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -160,7 +270,7 @@
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted pt-0">
-                                Yes! File Dock offers a generous free tier for all users. You can upload and share files completely free of charge. Premium plans are available for creators needing massive storage and advanced analytics.
+                                Yes! File Dock offers a generous free tier. Premium plans are available for creators needing massive storage, advanced analytics, and monetization features.
                             </div>
                         </div>
                     </div>
@@ -168,12 +278,12 @@
                     <div class="accordion-item bg-transparent border-bottom border-secondary mb-3 pb-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                Are my files secure?
+                                Where can I get the Android apps?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted pt-0">
-                                Absolutely. We use industry-standard encryption for files at rest and in transit. Your privacy and data security are our top priorities.
+                                Both the User App and the Admin App are available. You can find download links in the 'Android App' section of our website or directly via the Google Play Store (coming soon).
                             </div>
                         </div>
                     </div>
@@ -186,20 +296,7 @@
                         </h2>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted pt-0">
-                                Simply start a chat with @FileDock_FileUploaderBot on Telegram. You can forward any file or media to the bot, and it will instantly provide you with a secure File Dock sharing link.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ Item 4 -->
-                    <div class="accordion-item bg-transparent border-bottom border-secondary mb-3 pb-2 border-0">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-transparent text-white fw-bold shadow-none fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                Do you have a mobile app?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-muted pt-0">
-                                Yes! Our Android app is currently available for download. The iOS app is actively in development and will be released very soon.
+                                Start a chat with @FileDock_FileUploaderBot on Telegram. Forward any file to the bot, and it will instantly provide you with a secure File Dock sharing link.
                             </div>
                         </div>
                     </div>
@@ -210,12 +307,24 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py-5 mb-5 text-center">
-    <div class="container">
-        <div class="glass-card">
-            <h2 class="fw-bold mb-4">Ready to upgrade your storage?</h2>
-            <p class="text-muted mb-4">Join thousands of users who trust File Dock for their cloud storage needs.</p>
-            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg btn-rounded btn-glow px-5 py-3">Create Free Account</a>
+<section class="py-5 mb-5 mt-5">
+    <div class="container text-center">
+        <div class="glass-card p-5" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9)); border-color: var(--primary-color);">
+            <span class="badge bg-white text-dark mb-3 px-3 py-2 rounded-pill fw-bold">Get Started Today</span>
+            <h2 class="fw-bold mb-4 display-5">Ready for a <span class="gradient-text">Mobile-First</span> Experience?</h2>
+            <p class="text-muted mb-5 lead max-w-2xl mx-auto">Join the future of file management. Download the apps or start using our web platform instantly.</p>
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="{{ url_for('android_app') }}" class="btn btn-primary btn-lg btn-rounded btn-glow px-4">
+                    <i class="bi bi-google-play me-2"></i>User App
+                </a>
+                <a href="{{ url_for('android_app') }}" class="btn btn-outline-light btn-lg btn-rounded glass-btn px-4">
+                    <i class="bi bi-shield-lock me-2"></i>Admin App
+                </a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg btn-rounded px-4">
+                    <i class="bi bi-browser-chrome me-2"></i>Web Admin
+                </a>
+            </div>
         </div>
     </div>
 </section>
