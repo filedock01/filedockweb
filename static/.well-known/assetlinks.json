@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ignito.filedockuser",
+      "sha256_cert_fingerprints": [
+        "97:28:38:59:09:8B:91:AC:F1:36:03:DF:8B:5C:E5:E7:37:B4:6F:D3:22:97:93:2D:87:1A:A7:61:B7:10:6A:A5"
+      ]
+    }
+  }
+]
